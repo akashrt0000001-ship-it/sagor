@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MD SAGOR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+color:white;
+background:
+linear-gradient(120deg,#ff0080,#7928ca,#00c6ff,#00ff95);
+background-size:400% 400%;
+animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+0%{background-position:left}
+100%{background-position:right}
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(14px);
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+z-index:999;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:75px;
+font-weight:800;
+background:linear-gradient(90deg,#fff,#00ffe0,#fff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{font-size:24px;margin:15px}
+
+/* BUTTON */
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+background:linear-gradient(45deg,#ff00cc,#3333ff,#00ffee);
+color:white;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 10px 35px rgba(0,0,0,.5);
+}
+
+/* SECTION */
+
+.section{padding:120px 20px;text-align:center}
+
+.glass{
+background:rgba(255,255,255,0.1);
+padding:45px;
+border-radius:35px;
+max-width:1100px;
+margin:auto;
+box-shadow:0 35px 90px rgba(0,0,0,.6);
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.gallery img{
+width:260px;
+border-radius:24px;
+transition:.7s;
+box-shadow:0 20px 50px rgba(0,0,0,.7);
+}
+
+.gallery img:hover{
+transform:scale(1.15) rotate(3deg);
+}
+
+/* CONTACT */
+
+input,textarea{
+width:90%;
+max-width:500px;
+padding:18px;
+margin:12px;
+border-radius:15px;
+border:none;
+}
+
+/* FLOAT */
+
+.float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:linear-gradient(45deg,#25D366,#00ffcc);
+padding:18px 24px;
+border-radius:60px;
+text-decoration:none;
+color:white;
+font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px;
+margin-top:100px;
+background:rgba(0,0,0,.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<b>MD SAGOR</b>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<h1>MD SAGOR</h1>
+<p>Traveler • Content Creator • Savar Dhaka</p>
+<a class="btn" href="https://www.facebook.com/sagor247.bd" target="_blank">Facebook Profile</a>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+<div class="glass">
+<h1>About Me</h1>
+<p>
+আমি ভ্রমণ করতে অনেক ভালোবাসি এবং একজন সফল কনটেন্ট ক্রিয়েটর হতে চাই।
+ঢাকার সাভারে থাকি এবং নতুন নতুন জায়গা explore করা আমার passion।
+</p>
+</div>
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<h1>My Travel Gallery</h1>
+
+<div class="gallery" id="g"></div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section">
+<div class="glass">
+
+<h1>Contact Me</h1>
+
+<input placeholder="Your Name"><br>
+<textarea placeholder="Message"></textarea><br>
+
+<a class="btn" href="mailto:shagorrana247@gmail.com">Send Email</a>
+
+<p style="margin-top:25px">
+Phone: +8801704645400
+</p>
+
+</div>
+</section>
+
+<a class="float" href="https://wa.me/8801704645400">WhatsApp</a>
+
+<footer>
+© 2026 MD SAGOR
+</footer>
+
+<script>
+
+/* AUTO LOAD images */
+
+let box=document.getElementById("g");
+
+for(let i=0;i<=9;i++){
+let img=document.createElement("img");
+img.src="images/"+i+".jpg";
+box.appendChild(img);
+}
+
+</script>
+
+</body>
+</html>
